@@ -1,4 +1,3 @@
-import { threadId } from 'worker_threads';
 import Daily from '../models/daily_model';
 
 export default class dailyService {

@@ -1,5 +1,5 @@
 import Meditation from '../models/meditation_model';
-import MeditationTopic from './meditation_topics_model';
+import MeditationTopic from '../models/meditation_topics_model';
 
 export default class meditationService {
   static async createMeditation(

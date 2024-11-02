@@ -1,5 +1,5 @@
-import Emotion from '../models/emotions_model.ts';
-import EmotionCause from '../models/emotion_cause_model.ts';
+import Emotion from '../models/emotions_model';
+import EmotionCause from '../models/emotion_cause_model';
 
 export default class EmotionService {
   static async createEmotion(emotion: string, photo: string) {

@@ -1,5 +1,5 @@
 import { DataTypes, ModelDefined, Optional } from 'sequelize';
-import sequelize from '../config/config.ts';
+import sequelize from '../config/config';
 
 export interface MeditationTopicAttributes {
   id: number;

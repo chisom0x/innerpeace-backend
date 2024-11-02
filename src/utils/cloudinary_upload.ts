@@ -1,4 +1,4 @@
-import cloudinary from '../config/cloudinary_config.ts'; 
+import cloudinary from '../config/cloudinary_config'; 
 import { Readable } from 'stream';
 
 export const uploadPhotoBufferToCloudinary = async (buffer: Buffer): Promise<string> => {

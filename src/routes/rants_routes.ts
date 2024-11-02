@@ -1,6 +1,5 @@
 import { Router } from 'express';
-import RantController from '../controllers/rants_controller.ts';
-import Rant from '../models/rants_model';
+import RantController from '../controllers/rants_controller';
 
 const router = Router()
 

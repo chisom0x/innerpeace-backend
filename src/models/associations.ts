@@ -1,11 +1,11 @@
-import UserEmotions from './user_emotions_model.ts';
-import User from './user_model.ts';
-import Emotion from './emotions_model.ts';
-import EmotionCause from './emotion_cause_model.ts';
-import Meditation from './meditation_model.ts';
-import MeditationTopic from '../services/meditation_topics_model.ts';
-import Rant from './rants_model.ts'; 
-import RantComment from './rants_comments_model.ts';  
+import UserEmotions from './user_emotions_model';
+import User from './user_model';
+import Emotion from './emotions_model';
+import EmotionCause from './emotion_cause_model';
+import Meditation from './meditation_model';
+import MeditationTopic from './meditation_topics_model';
+import Rant from './rants_model';
+import RantComment from './rants_comments_model';
 
 // Many UserEmotions for one User
 UserEmotions.belongsTo(User, {
@@ -46,13 +46,13 @@ EmotionCause.hasMany(UserEmotions, {
 // One Meditation has many MeditationTopics
 Meditation.hasMany(MeditationTopic, {
   foreignKey: 'meditationId',
-  as: 'topics', 
+  as: 'topics',
 });
 
 // Many MeditationTopics belong to one Meditation
 MeditationTopic.belongsTo(Meditation, {
   foreignKey: 'meditationId',
-  as: 'meditation', 
+  as: 'meditation',
 });
 
 // One Rant has many RantComments

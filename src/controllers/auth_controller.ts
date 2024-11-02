@@ -1,9 +1,8 @@
-import UserService from '../services/user_service.ts';
+import UserService from '../services/user_service';
 import { NextFunction, Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
-import AppError from '../utils/app_error.ts';
-import createSendToken from '../utils/jwt_helper.ts';
-import { successResponse } from '../utils/response.ts';
+import AppError from '../utils/app_error';
+import createSendToken from '../utils/jwt_helper';
 
 export default class Authentication {
   static async signUp(req: Request, res: Response, next: NextFunction) {

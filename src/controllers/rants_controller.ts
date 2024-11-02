@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import AppError from '../utils/app_error.ts';
-import { successResponse } from '../utils/response.ts';
-import rantsService from '../services/rants_service.ts';
+import AppError from '../utils/app_error';
+import { successResponse } from '../utils/response';
+import rantsService from '../services/rants_service';
 
 export default class RantController {
   

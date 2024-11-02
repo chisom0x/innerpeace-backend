@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { errorResponse } from './response.ts';
-import AppError from './app_error.ts';
+import { errorResponse } from './response';
+import AppError from './app_error';
 
 const globalErrorHandler = (
   err: AppError,

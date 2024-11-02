@@ -1,11 +1,11 @@
 import {
   uploadAudioBufferToCloudinary,
   uploadPhotoBufferToCloudinary,
-} from '../utils/cloudinary_upload.ts';
+} from '../utils/cloudinary_upload';
 import { NextFunction, Request, Response } from 'express';
-import AppError from '../utils/app_error.ts';
-import { successResponse } from '../utils/response.ts';
-import meditationService from '../services/meditation_service.ts';
+import AppError from '../utils/app_error';
+import { successResponse } from '../utils/response';
+import meditationService from '../services/meditation_service';
 
 export default class meditationController {
   static async addMeditation(req: Request, res: Response, next: NextFunction) {

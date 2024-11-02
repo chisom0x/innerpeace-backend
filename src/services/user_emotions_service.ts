@@ -1,5 +1,5 @@
 import { Op } from 'sequelize';
-import UserEmotions from '../models/user_emotions_model.ts';
+import UserEmotions from '../models/user_emotions_model';
 import { subDays } from 'date-fns';
 
 export class UserEmotionsService {

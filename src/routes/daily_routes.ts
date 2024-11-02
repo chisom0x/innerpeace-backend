@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import upload from '../middlewares/multer.ts';
+import upload from '../middlewares/multer';
 import dailyController from '../controllers/daily_controller';
 
 const router = Router();

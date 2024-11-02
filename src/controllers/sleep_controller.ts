@@ -1,11 +1,11 @@
 import { NextFunction, Request, Response } from 'express';
-import AppError from '../utils/app_error.ts';
-import { successResponse } from '../utils/response.ts';
-import sleepService from '../services/sleep_service.ts';
+import AppError from '../utils/app_error';
+import { successResponse } from '../utils/response';
+import sleepService from '../services/sleep_service';
 import {
   uploadAudioBufferToCloudinary,
   uploadPhotoBufferToCloudinary,
-} from '../utils/cloudinary_upload.ts';
+} from '../utils/cloudinary_upload';
 
 export default class sleepController {
   static async addSleep(req: Request, res: Response, next: NextFunction) {

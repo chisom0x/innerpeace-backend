@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import router from './routes/index.ts';
-import globalErrorHandler from './utils/global_error_handler.ts';
+import router from './routes/index';
+import globalErrorHandler from './utils/global_error_handler';
 
 
 dotenv.config();

@@ -1,4 +1,4 @@
-import User from '../models/user_model.ts';
+import User from '../models/user_model';
 
 export default class UserService {
   static async createUser(

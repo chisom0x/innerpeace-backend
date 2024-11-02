@@ -1,6 +1,6 @@
 import { DataTypes, Sequelize, ModelDefined, Optional } from 'sequelize';
-import sequelize from '../config/config.ts';
-import UserEmotions from './user_emotions_model.ts';
+import sequelize from '../config/config';
+import UserEmotions from './user_emotions_model';
 
 export interface EmotionAttributes {
   id: number;

@@ -1,5 +1,4 @@
-import { stat } from 'fs';
-import Sleep from '../models/sleep_model.ts';
+import Sleep from '../models/sleep_model';
 
 export default class sleepService {
   static async createSleep(

@@ -1,5 +1,5 @@
-import sleepController from '../controllers/sleep_controller.ts';
-import upload from '../middlewares/multer.ts';
+import sleepController from '../controllers/sleep_controller';
+import upload from '../middlewares/multer';
 import { Router } from 'express';
 
 const router = Router();

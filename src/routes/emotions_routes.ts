@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import EmotionsController from '../controllers/emotions_controller.ts';
+import EmotionsController from '../controllers/emotions_controller';
 
 const router = Router();
 

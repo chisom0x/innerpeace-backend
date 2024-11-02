@@ -1,10 +1,10 @@
-import EmotionService from '../services/emotions_service.ts';
+import EmotionService from '../services/emotions_service';
 import { NextFunction, Request, Response } from 'express';
 import { format } from 'date-fns';
-import AppError from '../utils/app_error.ts';
-import { successResponse } from '../utils/response.ts';
-import LoggedInUser from '../utils/logged_in_user.ts';
-import { UserEmotionsService } from '../services/user_emotions_service.ts';
+import AppError from '../utils/app_error';
+import { successResponse } from '../utils/response';
+import LoggedInUser from '../utils/logged_in_user';
+import { UserEmotionsService } from '../services/user_emotions_service';
 
 export default class EmotionsController {
   static async addEmotion(req: Request, res: Response, next: NextFunction) {

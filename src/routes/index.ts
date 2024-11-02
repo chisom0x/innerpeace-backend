@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import authRouter from './auth_routes.ts';
-import emotionsRouter from './emotions_routes.ts';
-import sleepRouter from './sleep_routes.ts';
-import dailyRouter from './daily_routes.ts';
-import meditationRouter from './meditation_routes.ts';
-import rantRouter from './rants_routes.ts';
+import authRouter from './auth_routes';
+import emotionsRouter from './emotions_routes';
+import sleepRouter from './sleep_routes';
+import dailyRouter from './daily_routes';
+import meditationRouter from './meditation_routes';
+import rantRouter from './rants_routes';
 
 const router = Router();
 
