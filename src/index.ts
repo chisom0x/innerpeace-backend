@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { createServer } from './app';
 import sequelize from './config/config';
 import './models/associations';
@@ -15,7 +16,7 @@ const connectDB = async () => {
 connectDB();
 
 const server = createServer();
-const port = 5000;
+const port = process.env.PORT || 5000;
 server.listen(port, () => {
   console.log(`api running on ${port}`);
 });
