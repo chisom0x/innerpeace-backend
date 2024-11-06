@@ -28,8 +28,9 @@ const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 connectDB();
 const server = (0, app_1.createServer)();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 server.listen(port, () => {
-    console.log(`api running on ${port}`);
+    console.log();
+    console.log(`api running on ${port} -- ${process.env.PORT}`);
 });
 //# sourceMappingURL=index.js.map

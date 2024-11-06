@@ -16,7 +16,8 @@ const connectDB = async () => {
 connectDB();
 
 const server = createServer();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 server.listen(port, () => {
-  console.log(`api running on ${port}`);
+  console.log();
+  console.log(`api running on ${port} -- ${process.env.PORT}`);
 });

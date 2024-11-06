@@ -1,7 +1,6 @@
 import { DataTypes, Sequelize, ModelDefined, Optional } from 'sequelize';
 import bcrypt from 'bcryptjs';
-import sequelize from '../config/config';
-import UserEmotions from './user_emotions_model';
+import  sequelize  from './../config/config';
 
 export interface UserAttributes {
   id: number;
@@ -15,8 +14,9 @@ export interface UserAttributes {
 
 export interface UserCreationAttributes
   extends Optional<UserAttributes, 'id' | 'createdAt' | 'updatedAt'> {}
-
+  console.log(sequelize instanceof Sequelize); 
 const User: ModelDefined<UserAttributes, UserCreationAttributes> =
+
   sequelize.define(
     'User',
     {
