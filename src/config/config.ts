@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// Define the configuration interface for our environment variables
 interface DBConfig {
   username: string;
   password: string;
@@ -12,12 +11,11 @@ interface DBConfig {
   port: number;
   dialect: 'postgres';
   logging: boolean;
+  ssl?: boolean; 
 }
 
-// Determine the environment (default to 'development' if not specified)
 const env = process.env.NODE_ENV || 'development';
 
-// Set up database credentials based on the current environment
 const dbConfig: DBConfig = {
   username: env === 'production' ? process.env.DB_PROD_USERNAME! : process.env.DB_DEV_USERNAME!,
   password: env === 'production' ? process.env.DB_PROD_PASSWORD! : process.env.DB_DEV_PASSWORD!,
@@ -28,7 +26,6 @@ const dbConfig: DBConfig = {
   logging: false,
 };
 
-// Initialize Sequelize with the selected configuration
 const sequelize = new Sequelize(
   dbConfig.database,
   dbConfig.username,
@@ -38,8 +35,13 @@ const sequelize = new Sequelize(
     port: dbConfig.port,
     dialect: dbConfig.dialect,
     logging: dbConfig.logging,
+    dialectOptions: env === 'production' ? {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, 
+      },
+    } : {}
   }
 );
 
-
-export default  sequelize ;
+export default sequelize;
